@@ -114,6 +114,9 @@ struct Params {
     int64_t nPowTargetTimespan;
     int64_t nMinDiffRescueHeight;
     int64_t nMinDiffQuarantineHeight;
+    int nLotteryConsensusHeight{0};
+    int nLotteryFinalConsensusHeight{0};
+    int nLotteryModulo{20};
     std::chrono::seconds PowTargetSpacing() const
     {
         return std::chrono::seconds{nPowTargetSpacing};
